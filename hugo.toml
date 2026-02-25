@@ -1,0 +1,33 @@
+baseURL = 'https://kakimatsu.com/blog/'
+languageCode = 'ja-JP'
+DefaultContentLanguage = 'ja'
+title = "all of them against the backdrop of summer's luscious green"
+theme = 'PaperMod'
+disableKinds = ["section", "taxonomy", "term", "RSS"]
+hasCJKLanguage = true
+summaryLength = 20
+
+[author]
+  name = "kakimatsu"
+
+[pagination]
+  pagerSize = 1000000
+
+[params]
+  copyright = "kakimatsu"
+  
+  # Disable dark mode
+  defaultTheme = "light"
+  disableThemeToggle = true
+  
+  # Disable summaries and metadata
+  ShowReadingTime = false
+  ShowShareButtons = false
+  ShowPostNavLinks = false
+  ShowBreadCrumbs = false
+  ShowCodeCopyButtons = true
+  ShowWordCount = false
+  ShowRssButtonInSectionTermList = false
+  disableSpecial1stPost = true
+  hideSummary = true
+  hideAuthor = true

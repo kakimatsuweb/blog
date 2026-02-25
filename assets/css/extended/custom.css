@@ -1,0 +1,122 @@
+/* Remove underlines from all links */
+a {
+  color: #0066cc !important;
+  text-decoration: none !important;
+}
+
+a:hover {
+  text-decoration: underline !important;
+}
+
+/* Keep site title default color */
+.logo a,
+.logo a:hover {
+  color: var(--primary) !important;
+  text-decoration: none !important;
+}
+
+/* Ensure post content links have no underline */
+.post-content a {
+  color: #0066cc !important;
+  text-decoration: none !important;
+}
+
+.post-content a:hover {
+  text-decoration: underline !important;
+}
+
+/* Align header with content */
+.nav {
+  max-width: var(--main-width);
+  margin: 0 auto;
+  padding: 0;
+}
+
+.main {
+  max-width: var(--main-width);
+  margin: 0 auto;
+}
+
+.post-content a {
+    box-shadow: none !important;
+    text-decoration: none !important;
+}
+
+/* Hide the pagination buttons at the bottom of the list */
+.pagination {
+    display: none !important;
+}
+
+/* Make the site title slim */
+.logo a {
+    font-weight: 300 !important; /* Adjust from 100 to 400 for desired slimness */
+    letter-spacing: 0.5px;      /* Optional: slightly space out letters for a cleaner look */
+    text-transform: lowercase;  /* Optional: keeps it minimal and matches your aesthetic */
+}
+
+/* If you have menu items, make them slim too */
+#menu a {
+    font-weight: 300 !important;
+}
+
+/* Allow title to wrap only when absolutely necessary */
+.logo a {
+    font-weight: 300 !important;
+    display: inline-block;
+    line-height: 1.2;             /* Prevents lines from crashing if they wrap */
+    white-space: normal;          /* Allows wrapping */
+    word-break: keep-all;         /* Prevents breaking words in the middle */
+    
+    /* Fluid font size: scales gracefully before wrapping */
+    font-size: clamp(14px, 4vw, 22px) !important;
+    letter-spacing: -0.01em !important;
+}
+
+/* Ensure the header expands vertically if the title wraps */
+.nav {
+    flex-wrap: wrap; 
+    padding: 15px var(--gap);
+    gap: 10px;
+}
+
+/* Keep the menu aligned even if the title takes two lines */
+#menu {
+    margin-inline-start: auto;
+    display: flex;
+    align-items: center;
+}
+
+/* Homepage List Titles & Single Post Titles */
+.entry-header h2, 
+.post-header h1 {
+    font-weight: 300 !important;
+    line-height: 1.3;
+    margin-bottom: 10px;
+    
+    /* Fluid font size for titles: 
+       Scales between 20px and 32px based on screen width */
+    font-size: clamp(20px, 5vw, 32px) !important;
+    
+    /* Allow natural wrapping */
+    white-space: normal;
+    word-break: keep-all; 
+    overflow-wrap: break-word;
+}
+
+/* Adjust spacing for the post metadata (date, etc.) to match the slim title */
+.post-meta {
+    font-weight: 300;
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+/* Hides the description/summary on the homepage and list pages */
+.list-main .entry-content, 
+.entry-content {
+    display: none !important;
+}
+
+/* Hides the description at the top of individual post pages */
+.post-description {
+    display: none !important;
+}
